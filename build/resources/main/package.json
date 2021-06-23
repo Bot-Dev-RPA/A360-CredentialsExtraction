@@ -1,0 +1,35 @@
+{
+    "name": "LHGH Credentials",
+    "label": "[[label]]",
+    "description": "[[description]]",
+    "group": "com.automationanywhere",
+    "artifactName": "A360 Credentials",
+    "packageVersion": "2.0.9-20210530-132025",
+    "codeVersion": "2.0.9-20210530-132025",
+    "author": "",
+    "commands": [
+        {
+            "name": "Credential_Extraction",
+            "label": "[[CredentialTypeDemo.label]]",
+            "description": "[[CredentialTypeDemo.description]]",
+            "mainClass": "com.automationanywhere.botcommand.GetCredentialCommand",
+            "icon": "sample.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[CredentialTypeDemo.return_label]]",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "credentials",
+                    "label": "[[CredentialTypeDemo.credentials.label]]",
+                    "type": "CREDENTIAL",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

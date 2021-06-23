@@ -1,0 +1,10 @@
+{
+	"label": "LHGH Credentials",
+	"description": "Provides actions for Credentials.",
+	"CredentialTypeDemo.label": "Extract Credentials",
+	"CredentialTypeDemo.description": "Action for extracting credential to string.",
+	"CredentialTypeDemo.credentials.label": "Select credential whose value is to be extracted.",
+	"CredentialTypeDemo.return_label": "Select variable to store credential value.",
+	"group": "Sumit Kumar",
+	"vendor": "Sumit Kumar"
+}

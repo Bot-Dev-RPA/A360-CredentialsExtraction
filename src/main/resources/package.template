@@ -1,0 +1,11 @@
+{
+  "name": "LHGH Credentials",
+  "label": "[[label]]",
+  "description": "[[description]]",
+  "group": "",
+  "artifactName": "",
+  "packageVersion": "1.5",
+  "codeVersion": "1.5",
+  "author": "Sumit Kumar",
+  "commands": []
+}
