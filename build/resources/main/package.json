@@ -4,9 +4,9 @@
     "description": "[[description]]",
     "group": "com.automationanywhere",
     "artifactName": "A360 Credentials",
-    "packageVersion": "2.0.9-20210530-132025",
-    "codeVersion": "2.0.9-20210530-132025",
-    "author": "",
+    "packageVersion": "2.0.9-20210629-201635",
+    "codeVersion": "2.0.9-20210629-201635",
+    "author": "Sumit Kumar",
     "commands": [
         {
             "name": "Credential_Extraction",
@@ -30,6 +30,17 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Get_Token",
+            "label": "[[TokenTypeDemo.label]]",
+            "description": "[[TokenTypeDemo.description]]",
+            "mainClass": "com.automationanywhere.botcommand.GetTokenCommand",
+            "icon": "sample.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[TokenTypeDemo.return_label]]",
+            "returnRequired": true
         }
     ]
 }

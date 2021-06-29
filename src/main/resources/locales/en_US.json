@@ -5,6 +5,9 @@
 	"CredentialTypeDemo.description": "Action for extracting credential to string.",
 	"CredentialTypeDemo.credentials.label": "Select credential whose value is to be extracted.",
 	"CredentialTypeDemo.return_label": "Select variable to store credential value.",
+	"TokenTypeDemo.label": "Extract Auth Token",
+	"TokenTypeDemo.description": "Action for extracting auth token",
+	"TokenTypeDemo.return_label": "Select variable to store auth token",
 	"group": "Sumit Kumar",
 	"vendor": "Sumit Kumar"
 }

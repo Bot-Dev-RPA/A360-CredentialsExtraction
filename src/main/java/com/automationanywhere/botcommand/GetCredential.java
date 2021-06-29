@@ -24,10 +24,6 @@ public class GetCredential {
     public Value<String> action(@Idx(index = "1", type = AttributeType.CREDENTIAL)
                                     @Pkg(label = "[[CredentialTypeDemo.credentials.label]]") @NotEmpty
                                             SecureString credentials) {
-        // SecureString provides multiple way to access the data inside.
-        // Let's try to get the user name and print it in logs.
-
-        // To get the credential as String
         try {
             String result = credentials.getInsecureString();
             return new StringValue(result);
