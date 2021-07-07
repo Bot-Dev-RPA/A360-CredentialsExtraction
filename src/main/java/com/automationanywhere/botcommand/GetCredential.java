@@ -8,6 +8,7 @@ import com.automationanywhere.commandsdk.annotations.CommandPkg;
 import com.automationanywhere.commandsdk.annotations.Execute;
 import com.automationanywhere.commandsdk.annotations.Idx;
 import com.automationanywhere.commandsdk.annotations.Pkg;
+import com.automationanywhere.commandsdk.annotations.rules.CredentialAllowPassword;
 import com.automationanywhere.commandsdk.annotations.rules.NotEmpty;
 import com.automationanywhere.commandsdk.model.AttributeType;
 import com.automationanywhere.core.security.SecureString;
@@ -23,7 +24,7 @@ public class GetCredential {
     @Execute
     public Value<String> action(@Idx(index = "1", type = AttributeType.CREDENTIAL)
                                     @Pkg(label = "[[CredentialTypeDemo.credentials.label]]") @NotEmpty
-                                            SecureString credentials) {
+                                     @CredentialAllowPassword       SecureString credentials) {
         try {
             String result = credentials.getInsecureString();
             return new StringValue(result);

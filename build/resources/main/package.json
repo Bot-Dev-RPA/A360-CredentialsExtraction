@@ -4,14 +4,16 @@
     "description": "[[description]]",
     "group": "com.automationanywhere",
     "artifactName": "A360 Credentials",
-    "packageVersion": "2.0.9-20210629-201635",
-    "codeVersion": "2.0.9-20210629-201635",
+    "packageVersion": "2.1.0-20210707-172310",
+    "codeVersion": "2.1.0-20210707-172310",
     "author": "Sumit Kumar",
     "commands": [
         {
             "name": "Credential_Extraction",
             "label": "[[CredentialTypeDemo.label]]",
             "description": "[[CredentialTypeDemo.description]]",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
             "mainClass": "com.automationanywhere.botcommand.GetCredentialCommand",
             "icon": "sample.svg",
             "returnType": "STRING",
@@ -26,6 +28,9 @@
                     "rules": [
                         {
                             "name": "NOT_EMPTY"
+                        },
+                        {
+                            "name": "CREDENTIAL_ALLOW_PASSWORD"
                         }
                     ]
                 }
@@ -35,6 +40,8 @@
             "name": "Get_Token",
             "label": "[[TokenTypeDemo.label]]",
             "description": "[[TokenTypeDemo.description]]",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
             "mainClass": "com.automationanywhere.botcommand.GetTokenCommand",
             "icon": "sample.svg",
             "returnType": "STRING",

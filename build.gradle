@@ -21,16 +21,16 @@ plugins {
 }
 
 configure(allprojects){
-	
+
 	apply plugin: 'com.github.johnrengelman.shadow'
 	apply plugin: "com.automationanywhere.command-codegen"
-	
+
 	ext {
 		groupName = 'com.automationanywhere'
 		testNgVersion = '6.14.3'
 		loggerVersion = '2.10.0'
-		jnaVersion = '5.3.1'	
-		version '2.0.9'
+		jnaVersion = '5.3.1'
+		version '2.1.0'
 	}
 	group "$groupName"
 
@@ -38,7 +38,7 @@ configure(allprojects){
 
 	compileJava.options.encoding = 'UTF-8'
 	compileTestJava.options.encoding = 'UTF-8'
-	
+
 	repositories {
 		mavenCentral()
 		jcenter()
@@ -49,26 +49,26 @@ configure(allprojects){
 			dirs 'libs'
 		}
 	}
-	
+
 	configurations {
 		apt
 	}
-	
+
 	compileJava {
 		options.annotationProcessorPath = configurations.apt
-		
+
 		dependsOn processResources
 
 	}
-	
+
 	packageJson{
 		artifactName = project.name
 		group = "$groupName"
 		author = "Sumit Kumar"
 	}
-	
+
 	jar.dependsOn commandCodeGen
-	
+
 	shadowJar {
 		baseName = project.name
 		classifier = null
@@ -82,7 +82,7 @@ configure(allprojects){
 		rename '^OABWrapper.*\\.zip$', 'OABWrapper.zip'
 	}
 
-	
+
 	dependencies {
 		compileOnly name: 'command-annotations', version: '1+'
 		compileOnly name: 'bot-runtime', version: '1+'
@@ -94,9 +94,9 @@ configure(allprojects){
 		testImplementation "org.testng:testng:$testNgVersion"
 		testImplementation name: 'bot-runtime', version: '1+'
 		testImplementation name: 'bot-api', version: '1+'
-		implementation group: 'net.java.dev.jna', name: 'jna-platform', version: "$jnaVersion"		
+		implementation group: 'net.java.dev.jna', name: 'jna-platform', version: "$jnaVersion"
 
-		
+
 	}
-	
+
 }
