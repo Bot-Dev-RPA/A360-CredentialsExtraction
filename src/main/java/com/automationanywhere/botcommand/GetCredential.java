@@ -18,7 +18,7 @@ import static com.automationanywhere.commandsdk.model.DataType.STRING;
 
 @BotCommand
 @CommandPkg(label = "[[CredentialTypeDemo.label]]",description = "[[CredentialTypeDemo.description]]", icon = "sample.svg", name = "Credential_Extraction" ,
-        return_label = "[[CredentialTypeDemo.return_label]]", return_type = STRING, return_required = true)
+        return_label = "[[CredentialTypeDemo.return_label]]", node_label = "Extract credential and save to {{returnTo}}",return_type = STRING, return_required = true)
 public class GetCredential {
 
     @Execute

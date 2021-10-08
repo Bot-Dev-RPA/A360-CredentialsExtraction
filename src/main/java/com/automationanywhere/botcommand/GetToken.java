@@ -11,7 +11,7 @@ import com.automationanywhere.commandsdk.annotations.Execute;
 import static com.automationanywhere.commandsdk.model.DataType.STRING;
 @BotCommand
 @CommandPkg(label = "[[TokenTypeDemo.label]]",description = "[[TokenTypeDemo.description]]", icon = "sample.svg", name = "Get_Token" ,
-        return_label = "[[TokenTypeDemo.return_label]]", return_type = STRING, return_required = true)
+        return_label = "[[TokenTypeDemo.return_label]]", node_label = "Extract auth token and save to {{returnTo}}",return_type = STRING, return_required = true)
 public class GetToken {
 
 
